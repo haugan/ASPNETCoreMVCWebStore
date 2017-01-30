@@ -170,8 +170,17 @@ namespace WebStore.Controllers
             // (GET-requests bør ikke direkte kunne endre/slette/lage data).
             return View(product);
         }
-
+        
         // POST: Products/Delete/5
+        /*
+         * CLR krever unik parameter-signatur for metoder som overloades. 
+         * Men, her er det behov for to Delete-metoder (en for GET og en for POST; med samme parameter-signatur).
+         * ASP.NET's scaffolding-mekanisme løser problemet ved å endre metodenavnet,
+         * og sette ActionName("Delete")-attributtet.
+         * 
+         * Attributtet utfører URL-mapping for routing-systemet, 
+         * så "Products/Delete/123" treffer begge metodene.
+        */
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
