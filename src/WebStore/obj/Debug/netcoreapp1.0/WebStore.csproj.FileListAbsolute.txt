@@ -1,0 +1,9 @@
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\bin\Debug\netcoreapp1.0\WebStore.deps.json
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\bin\Debug\netcoreapp1.0\WebStore.runtimeconfig.json
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\bin\Debug\netcoreapp1.0\WebStore.runtimeconfig.dev.json
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\bin\Debug\netcoreapp1.0\WebStore.dll
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\bin\Debug\netcoreapp1.0\WebStore.pdb
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\obj\Debug\netcoreapp1.0\WebStore.csprojResolveAssemblyReference.cache
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\obj\Debug\netcoreapp1.0\WebStore.AssemblyInfo.cs
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\obj\Debug\netcoreapp1.0\WebStore.dll
+c:\Users\haugis\documents\visual studio 2017\Projects\WebStore\src\WebStore\obj\Debug\netcoreapp1.0\WebStore.pdb
