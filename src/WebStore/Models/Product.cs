@@ -22,7 +22,7 @@ namespace WebStore.Models
         [StringLength(255, MinimumLength = 1)]
         public string Description { get; set; }
 
-        // Decimal er alltid [Required]
+        // Decimal (value-typer) er alltid [Required]
         [Range(1,99999)]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
