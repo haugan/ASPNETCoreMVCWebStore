@@ -18,14 +18,14 @@ namespace WebStore.Models
         [Display(Name = "First name")]
         [RegularExpression(@"^[A-Z]+[a-zA-Z''-'\s]*$")]
         public string FirstName { get; set; }
-
-        // DataType gir format-konfig. (Mailto-link).
+        
         [StringLength(127)]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
         // DateTime er alltid [Required]
-        // DataType gir format-konfig. (HTML-kalender).
+        // DataType gir HTML (data-dash) attributter som HTML5 browsere kan forstå (altså ingen validering)!
+        // DataType.Date datafelt vises i defaultformat satt i servers CultureInfo-objekt.
         [DataType(DataType.Date)] 
         public DateTime Birthday { get; set; }
     }
