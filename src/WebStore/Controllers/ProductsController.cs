@@ -62,12 +62,12 @@ namespace WebStore.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Product
-                .SingleOrDefaultAsync(m => m.ProductID == id);
+            var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductID == id);
             if (product == null)
             {
                 return NotFound();
             }
+
 
             return View(product);
         }
@@ -160,13 +160,14 @@ namespace WebStore.Controllers
                 return NotFound();
             }
 
-            var product = await _context.Product
-                .SingleOrDefaultAsync(m => m.ProductID == id);
+            var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductID == id);
             if (product == null)
             {
                 return NotFound();
             }
 
+            // Returnerer et view av produktmodellen hvor en HttpPost av slettingen kan utføres.
+            // (GET-requests bør ikke direkte kunne endre/slette/lage data).
             return View(product);
         }
 
@@ -177,7 +178,10 @@ namespace WebStore.Controllers
         {
             var product = await _context.Product.SingleOrDefaultAsync(m => m.ProductID == id);
             _context.Product.Remove(product);
+
             await _context.SaveChangesAsync();
+        
+
             return RedirectToAction("Index");
         }
 

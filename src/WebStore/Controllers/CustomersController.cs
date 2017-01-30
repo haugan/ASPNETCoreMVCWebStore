@@ -41,13 +41,13 @@ namespace WebStore.Controllers
                 return NotFound();
             }
 
-            var customer = await _context.Customer
-                .SingleOrDefaultAsync(m => m.CustomerID == id);
+            var customer = await _context.Customer.SingleOrDefaultAsync(m => m.CustomerID == id);
             if (customer == null)
             {
                 return NotFound();
             }
 
+            
             return View(customer);
         }
 
@@ -141,12 +141,12 @@ namespace WebStore.Controllers
                 return NotFound();
             }
 
-            var customer = await _context.Customer
-                .SingleOrDefaultAsync(m => m.CustomerID == id);
+            var customer = await _context.Customer.SingleOrDefaultAsync(m => m.CustomerID == id);
             if (customer == null)
             {
                 return NotFound();
             }
+
 
             return View(customer);
         }
@@ -158,7 +158,9 @@ namespace WebStore.Controllers
         {
             var customer = await _context.Customer.SingleOrDefaultAsync(m => m.CustomerID == id);
             _context.Customer.Remove(customer);
+
             await _context.SaveChangesAsync();
+
 
             return RedirectToAction("Index");
         }
